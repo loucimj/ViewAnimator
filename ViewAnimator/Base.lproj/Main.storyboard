@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="16A320" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ViewAnimator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ICd-VU-VAv">
+                                <rect key="frame" x="277" y="28" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="animateAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="owe-qk-mPI"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eD4-Kg-etA">
+                                <rect key="frame" x="150" y="81" width="300" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is my button" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DTG-dX-Llh">
+                                        <rect key="frame" x="85" y="14" width="131.5" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.89845067262649536" green="0.3815067511052358" blue="0.29997556779523044" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="DTG-dX-Llh" firstAttribute="centerX" secondItem="eD4-Kg-etA" secondAttribute="centerX" id="5DA-Na-SKM"/>
+                                    <constraint firstAttribute="width" constant="300" id="JRp-EM-Yp1"/>
+                                    <constraint firstItem="DTG-dX-Llh" firstAttribute="centerY" secondItem="eD4-Kg-etA" secondAttribute="centerY" id="fok-mp-BYZ"/>
+                                    <constraint firstAttribute="height" constant="50" id="nJe-OU-D7t"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image" translatesAutoresizingMaskIntoConstraints="NO" id="62w-hf-JZm">
+                                <rect key="frame" x="150" y="184" width="300" height="180"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="9Zh-2Q-vAX"/>
+                                    <constraint firstAttribute="width" constant="300" id="GnH-st-Ads"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eD4-Kg-etA" firstAttribute="centerY" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="86" id="1vT-h3-s6n"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ICd-VU-VAv" secondAttribute="bottom" constant="570" id="2og-VK-Rpw"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="62w-hf-JZm" secondAttribute="bottom" constant="236" id="5f6-oQ-6l2"/>
+                            <constraint firstItem="62w-hf-JZm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8wI-o3-2Gk"/>
+                            <constraint firstItem="ICd-VU-VAv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NRl-6t-vcE"/>
+                            <constraint firstItem="eD4-Kg-etA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lYV-7u-kCk"/>
+                            <constraint firstItem="ICd-VU-VAv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="otD-b6-Kfw"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="2og-VK-Rpw"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="buttonView" destination="eD4-Kg-etA" id="yIv-oM-ZIU"/>
+                        <outlet property="imageView" destination="62w-hf-JZm" id="T4k-67-GQG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-13" y="152"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="image" width="1280" height="853"/>
+    </resources>
+</document>
